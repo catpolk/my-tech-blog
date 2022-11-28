@@ -19,6 +19,6 @@ const commentData = [
 ];
 
 //Create and insert multiple instances in bulk
-const seedComment = () => Comment.bulkCreate(commentData);
+const seedComments = () => Comment.bulkCreate(commentData);
 
 module.exports = seedComments;
