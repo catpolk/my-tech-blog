@@ -1,5 +1,6 @@
 <div class="post">
-    {{#each posts as |post| }}
-        {{ > post-info post }}
-    {{\each}}
+    {{#each posts}}
+        <h2>{{title}}</h2>
+        <p>{{createdAt}}</p>
+    {{/each}}
 </div>

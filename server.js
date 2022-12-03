@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
@@ -9,22 +8,22 @@ const routes = require('./controllers');
 const hbs = exphbs.create({ helpers });
 const app = express();
 
-const POST = process.env.PORT || 3001;
-const SequelizeBlog = require('connect-session-sequilize')(session.Blog);
-const sess = {
-    secret: 'Super secret secret',
-    cookie: {
-        //stored in milliseconds, expires in 60 seconds 
-        maxAge: 60000
-     },
-     reverse: false,
-     saveUninitialized: true,
-     store: new SequelizeBlog({ 
-        db: sequelize
-     })
-};
+const PORT = process.env.PORT || 3001;
+// const SequelizeBlog = require('connect-session-sequilize')(session.Blog);
+// const sess = {
+//     secret: 'Super secret secret',
+//     cookie: {
+//         //stored in milliseconds, expires in 60 seconds 
+//         maxAge: 60000
+//      },
+//      reverse: false,
+//      saveUninitialized: true,
+//      store: new SequelizeBlog({ 
+//         db: sequelize
+//      })
+// };
 
-app.use(session(sess));
+// app.use(session(sess));
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));

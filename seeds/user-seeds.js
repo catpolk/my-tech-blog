@@ -1,6 +1,6 @@
 const { User } = require('../models');
 
-const userDate = [
+const userData = [
     {
         username: 'Kat',
         password: '12345'
@@ -16,6 +16,6 @@ const userDate = [
 ];
 
 //Create and insert multiple instances in bulk
-const seedUsers = () => UserbulkCreate(userDate);
+const seedUsers = () => User.bulkCreate(userData);
 
-module.export = seedUsers; 
+module.exports = seedUsers; 
